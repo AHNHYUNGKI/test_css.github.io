@@ -1,0 +1,194 @@
+/* 1. 웹폰트 선언 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+/* 2. 디자인 시작시 기본 선언 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100%;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%; /* 사이즈가 변경했을때 넓이 유지 */
+    height: auto; /* 넓이에 따라 높이가 변함 */
+}
+
+input, textarea, button, select {
+    -webkit-appearance: none; /* 브라우저별로 고유하게 적용되는 form관련요소들의 css제거 */
+    -moz-appearance: none;
+    -o-appearance: none;
+}
+
+ul, li, dl, ol {
+    list-style: none; /* 순서요소들의 리스트스타일 제거 */
+}
+
+/* 헤더영역 */
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+header h1 {
+    background-color: #fff;
+    font-size: 100px;
+    letter-spacing: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+header > ul {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+header > ul li {
+    float: left;
+    margin: 10px 15px;
+}
+header > ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 20px;
+}
+header > nav {
+    height: 45px;
+    background-color: #444;
+    text-align: center;
+}
+header > nav ul li {
+    display: inline-block;
+}
+header > nav ul li a {
+    display: block;
+    color: #fff;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    border-bottom: 1px solid #444;
+    transition: all 0.5s linear 0s;
+}
+header > nav ul li a:hover {
+    border-bottom: 5px solid #fff;
+    text-decoration: none;
+    color: #fff;
+}
+
+/* 섹션(메인)영역 */
+.main {
+    margin: 190px auto 0 auto;
+    text-align: center;
+    width: 1200px;
+    height: 750px;
+    position: relative;
+}
+.main img {
+    width: 1200px;
+}
+.main > .main-text {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+}
+.main h2 {
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.main p {
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.contents {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.inner {
+    overflow: hidden;
+}
+.contents > .inner li {
+    float: left;
+    width: 25%;
+    padding: 20px;
+    position: relative;
+}
+
+.contents > .inner .product {
+    width: 220px;
+}
+
+.contents > .inner li h2 {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.contents > .inner li h3 {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.contents > .inner li .content-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+}
+.contents > .inner li .content-hover a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    padding: 30px;
+    text-decoration: none;
+}
+
+.contents > .inner li .content-hover:hover {
+    opacity: 1;
+}
+
+.quick-area {
+    position: fixed;
+    top: 500px;
+    right: 0;
+    width: 100px;
+}
+
+.quick-area > .quick-list li {
+    text-align: center;
+    background-color: #282828;
+    font-size: 15px;
+}
+
+.quick-area > .quick-list li a {
+    display: block;
+    padding: 15px 0;
+    border-top: 1px solid #4d4d4d;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
